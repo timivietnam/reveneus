@@ -1,0 +1,8 @@
+fragment Calendar on Calendar {
+  id
+  project_id
+  description
+  all_day
+  start_date
+  end_date
+}

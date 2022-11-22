@@ -1,0 +1,5 @@
+mutation addCalendarOne($input: Calendar_insert_input!) {
+  insert_Calendar_one(object: $input) {
+    id
+  }
+}

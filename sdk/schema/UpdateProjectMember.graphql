@@ -1,0 +1,8 @@
+mutation updateProjectMemberList($updates: [ProjectMember_updates!]!) {
+  update_ProjectMember_many(updates: $updates) {
+    affected_rows
+    returning {
+      project_id
+    }
+  }
+}

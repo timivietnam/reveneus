@@ -1,0 +1,5 @@
+mutation AddCost($input: Cost_insert_input!) {
+  insert_Cost_one(object: $input) {
+    ...Cost
+  }
+}

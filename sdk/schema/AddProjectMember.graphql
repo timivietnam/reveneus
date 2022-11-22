@@ -1,0 +1,19 @@
+mutation AddProjectMember(
+  $project_id: uuid!
+  $member_id: uuid!
+  $user_id: uuid!
+  $hour_working: numeric!
+  $hour_rate: numeric!
+) {
+  insert_ProjectMember_one(
+    object: {
+      user_id: $user_id
+      member_id: $member_id
+      project_id: $project_id
+      hour_working: $hour_working
+      hour_rate: $hour_rate
+    }
+  ) {
+    ...ProjectMember
+  }
+}

@@ -1,0 +1,8 @@
+mutation updateBudgetList($updates: [Budget_updates!]!) {
+  update_Budget_many(updates: $updates) {
+    affected_rows
+    returning {
+      name
+    }
+  }
+}

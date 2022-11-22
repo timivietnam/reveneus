@@ -1,0 +1,7 @@
+#import Member from ./fragments/Member.graphql
+
+mutation AddMember($input: Member_insert_input!) {
+  insert_Member_one(object: $input) {
+    ...Member
+  }
+}

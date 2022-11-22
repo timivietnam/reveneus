@@ -1,0 +1,51 @@
+query GetUserGeneral(
+  $_ilike: String!
+  $limit: Int = 10
+  $offset: Int = 10
+  $user_id: uuid!
+) {
+  in_progress_projects: Project(
+    where: {
+      user_id: { _eq: $user_id }
+      name: { _ilike: $_ilike }
+      status_id: { _eq: In_Progress }
+    }
+    order_by: { start_date: desc }
+    limit: $limit
+    offset: $offset
+  ) {
+    ...Project
+  }
+  all_in_progress_project: Project_aggregate(
+    where: { status_id: { _eq: In_Progress }, user_id: { _eq: $user_id } }
+  ) {
+    aggregate {
+      count
+    }
+  }
+  calendars: Calendar(limit: 5, order_by: { start_date: asc }) {
+    ...Calendar
+  }
+  all_project: Project_aggregate(where: { user_id: { _eq: $user_id } }) {
+    aggregate {
+      count
+    }
+  }
+  total_budget: Budget_aggregate(where: { user_id: { _eq: $user_id } }) {
+    aggregate {
+      sum {
+        amount
+      }
+    }
+  }
+  total_cost: Cost_aggregate(where: { user_id: { _eq: $user_id } }) {
+    aggregate {
+      sum {
+        amount
+      }
+    }
+  }
+  project_members: ProjectMember(where: { user_id: { _eq: $user_id } }) {
+    ...ProjectMember
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "background-basic-color-1": "$color-basic-100",
+  "background-basic-color-2": "$color-basic-200",
+  "background-basic-color-3": "$color-basic-300",
+  "background-basic-color-4": "$color-basic-400",
+  "background-basic-color-5": "$color-basic-500",
+  "background-basic-color-6": "$color-basic-600",
+  "background-basic-color-7": "$color-basic-700",
+  "background-basic-color-8": "$color-basic-700",
+  "background-basic-color-9": "$color-basic-700",
+  "background-basic-color-10": "$color-danger-200",
+
+  "text-basic-color": "$color-basic-900",
+  "text-white-color": "$color-basic-100",
+  "text-primary-color": "$color-basic-600",
+  "text-placeholder-color": "$color-basic-900",
+  "text-control-color": "$color-basic-100",
+  "text-info-color": "$color-info-500",
+  "text-platinum-color": "$color-basic-800",
+  "text-danger-color": "$color-danger-500",
+  "text-warning-color": "$color-warning-500",
+
+  "button-info-color": "$color-info-500",
+  "button-danger-color": "$color-danger-200",
+  "button-primary-color": "$color-primary-500",
+
+  "border-basic-color-1": "$color-basic-300"
+}

@@ -1,0 +1,6 @@
+#import User from ./fragments/User.graphql
+query GetMe($uid: String!) {
+  User(where: { uid: { _eq: $uid } }) {
+    ...User
+  }
+}

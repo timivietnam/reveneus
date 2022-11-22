@@ -1,0 +1,6 @@
+#import Project from ./fragments/Project.graphql
+mutation AddProject($input: Project_insert_input!) {
+  insert_Project_one(object: $input) {
+    ...Project
+  }
+}

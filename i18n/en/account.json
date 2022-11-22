@@ -1,0 +1,13 @@
+{
+  "account_settings": "Account Settings",
+  "information": "Information",
+  "change_password": "Change Password",
+  "save_change": "Save Change",
+  "delete_account": "Delete Account",
+  "placeholder_full_name": "Enter your full name",
+  "placeholder_email": "Enter your email",
+  "placeholder_amount": "Enter the amount",
+  "placeholder_description": "Bio description",
+  "are_you_sure": "Are you sure?",
+  "description_delete_account": "Are you sure to delete account?\nThis action cannot be undone"
+}

@@ -1,0 +1,23 @@
+fragment Project on Project {
+  id
+  name
+  budget
+  cost
+  start_date
+  end_date
+  image_url
+  status_id
+  user_id
+  Costs {
+    ...Cost
+  }
+  Budgets {
+    ...Budget
+  }
+  ProjectMembers {
+    hour_working
+    Member {
+      ...Member
+    }
+  }
+}

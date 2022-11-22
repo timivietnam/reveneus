@@ -1,0 +1,7 @@
+#import Project from ./fragments/Project.graphql
+
+mutation UpdateProject($id: uuid!, $_set: Project_set_input!) {
+  update_Project_by_pk(pk_columns: { id: $id }, _set: $_set) {
+    ...Project
+  }
+}

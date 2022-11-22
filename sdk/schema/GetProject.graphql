@@ -1,0 +1,18 @@
+query GetProject(
+  $offset: Int = 20
+  $limit: Int = 20
+  $user_id: uuid!
+  $_ilike: String = "%%"
+) {
+  projects: Project(
+    limit: $limit
+    offset: $offset
+    order_by: { start_date: desc, created_at: asc }
+    where: { user_id: { _eq: $user_id }, name: { _ilike: $_ilike } }
+  ) {
+    ...Project
+  }
+  all_projects: Project(where: { user_id: { _eq: $user_id } }) {
+    ...Project
+  }
+}

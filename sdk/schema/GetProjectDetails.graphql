@@ -1,0 +1,10 @@
+#import Project from ./fragments/Project.graphql
+
+query GetProjectDetailsById($uuid: uuid!, $user_id: uuid!) {
+  Project(where: { id: { _eq: $uuid } }) {
+    ...Project
+  }
+  all_members: Member(where: { user_id: { _eq: $user_id } }) {
+    ...Member
+  }
+}

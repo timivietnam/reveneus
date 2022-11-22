@@ -1,0 +1,20 @@
+#import User from ./User.graphql
+mutation UpdateUser(
+  $full_name: String
+  $avatar_url: String
+  $description: String
+  $amount_premium: numeric
+  $id: uuid!
+) {
+  update_User_by_pk(
+    _set: {
+      full_name: $full_name
+      avatar_url: $avatar_url
+      description: $description
+      amount_premium: $amount_premium
+    }
+    pk_columns: { id: $id }
+  ) {
+    ...User
+  }
+}

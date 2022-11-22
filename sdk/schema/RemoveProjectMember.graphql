@@ -1,0 +1,5 @@
+mutation removeProjectMember($id: uuid!) {
+  delete_ProjectMember_by_pk(id: $id) {
+    id
+  }
+}

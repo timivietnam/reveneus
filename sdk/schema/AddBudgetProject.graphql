@@ -1,0 +1,8 @@
+mutation AddBudgetProject($input: Budget_insert_input!) {
+  insert_Budget_one(object: $input) {
+    name
+    Project {
+      name
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation RemoveCost($_id: uuid!) {
+  delete_Cost_by_pk(id: $_id) {
+    id
+  }
+}

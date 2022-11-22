@@ -1,0 +1,20 @@
+#import Member from ./fragments/Member.graphql
+
+query GetTeamMember(
+  $user_id: uuid!
+  $limit: Int = 10
+  $offset: Int = 10
+  $_ilike: String!
+) {
+  members: Member(
+    where: { user_id: { _eq: $user_id }, full_name: { _ilike: $_ilike } }
+    limit: $limit
+    offset: $offset
+    order_by: { full_name: asc }
+  ) {
+    ...Member
+  }
+  all_members: Member(where: { user_id: { _eq: $user_id } }) {
+    ...Member
+  }
+}

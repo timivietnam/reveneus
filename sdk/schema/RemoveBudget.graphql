@@ -1,0 +1,5 @@
+mutation RemoveBudget($_id: uuid!) {
+  delete_Budget_by_pk(id: $_id) {
+    id
+  }
+}

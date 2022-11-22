@@ -1,0 +1,7 @@
+#import Project from ./fragments/Project.graphql
+
+query GetProjectByUserId($name: String, $userId: uuid!) {
+  Project(where: { name: { _ilike: $name }, user_id: { _eq: $userId } }) {
+    ...Project
+  }
+}

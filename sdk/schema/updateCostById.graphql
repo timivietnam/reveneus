@@ -1,0 +1,9 @@
+mutation updateCostById($id: uuid!, $amount: numeric!, $user_id: uuid = "") {
+  update_Cost_by_pk(
+    pk_columns: { id: $id }
+    _set: { amount: $amount, user_id: $user_id }
+  ) {
+    name
+    amount
+  }
+}

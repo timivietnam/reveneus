@@ -1,0 +1,19 @@
+fragment ProjectMember on ProjectMember {
+  created_at
+  hour_rate
+  hour_working
+  id
+  member_id
+  project_id
+  updated_at
+  user_id
+  Project {
+    ...Project
+  }
+  Member {
+    ...Member
+  }
+  User {
+    ...User
+  }
+}
